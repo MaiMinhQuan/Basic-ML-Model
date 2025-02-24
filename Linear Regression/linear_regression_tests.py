@@ -20,7 +20,7 @@ regressor = LinearRegression(lr=0.01)
 regressor.fit(X_train, y_train)
 predicted = regressor.predict(X_test)
 
-def mse(y_true, y_predicted):   # min square error (loss function)
+def mse(y_true, y_predicted):   # mean square error (loss function)
     return np.mean((y_true - y_predicted) ** 2)
 
 mse_value = mse(y_test, predicted)

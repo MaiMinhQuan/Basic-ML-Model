@@ -21,6 +21,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # plt.scatter(X[:, 0], X[:, 2], c=y, cmap=cmap, edgecolors='k', s=20)    # illustrate sample using feature 0, 2 (2D)
 # plt.show()
 
+    
 from knn import KNN
 clf = KNN(k=3)  #classifier
 clf.fit(X_train, y_train)

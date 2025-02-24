@@ -17,7 +17,7 @@ class KNN:
         # compute distance
         distances = [euclidean_distance(x, x_train) for x_train in self.X_train]
         # get k nearest samples, labels
-        k_indices = np.argsort(distances)[:self.k]
+        k_indices = np.argsort(distances)[:self.k]  # return an array of sorted index
         k_nearest_labels = [self.y_train[i] for i in k_indices]
         # majority vote, most common class label
         most_common = Counter(k_nearest_labels).most_common(1) # 1 most common item -> return a list: each item (value, frequency)
